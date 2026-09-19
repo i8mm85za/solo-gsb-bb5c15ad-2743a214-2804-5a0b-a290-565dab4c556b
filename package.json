@@ -1,0 +1,17 @@
+{
+  "name": "argument-stability-sandbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "论证稳定性沙盘：在有向循环图上迭代传播可信度，检测收敛与持续振荡",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "build": "npm run build -w server && npm run build -w client",
+    "start": "npm run start -w server",
+    "dev:client": "npm run dev -w client",
+    "dev:server": "npm run build -w server && npm run start -w server",
+    "test:engine": "node scripts/engine-smoke-test.mjs"
+  }
+}
